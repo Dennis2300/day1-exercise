@@ -7,6 +7,7 @@ import EventDemo from "./exercises/EventDemo";
 import FormUncontrolled from "./exercises/FormUncontrolled";
 import StateDemo from "./exercises/StateDemo1";
 import StateDemo2 from "./exercises/StateDemo2";
+import StateDemo3 from "./exercises/StateDemo3";
 
 export default function App() {
   const [selectedView, setSelectedView] = useState("info");
@@ -53,6 +54,9 @@ export default function App() {
             {selectedView === "State Demo 2" ? (
               <StateDemo2 title="State Demo 2" />
             ) : null}
+            {selectedView === "State Demo 3" ? (
+              <StateDemo3 title="State Demo 3" />
+            ) : null}
           </div>
         </div>
       </div>
@@ -95,6 +99,10 @@ const Buttons = (props: ButtonProps) => {
 
     <button className="btn-w100" onClick={() => handleSelected("State Demo 2")}>
       State Demo 2
+    </button>
+
+    <button className="btn-w100" onClick={() => handleSelected("State Demo 3")}>
+      State Demo 3
     </button>
   
     </>
