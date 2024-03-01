@@ -9,6 +9,7 @@ import StateDemo from "./exercises/StateDemo1";
 import StateDemo2 from "./exercises/StateDemo2";
 import StateDemo3 from "./exercises/StateDemo3";
 import UseEffect from "./exercises/UseEffect";
+import FetchDemo from "./exercises/FetchDemo";
 
 export default function App() {
   const [selectedView, setSelectedView] = useState("info");
@@ -61,6 +62,10 @@ export default function App() {
             {selectedView === "UseEffect" ? (
               <UseEffect title="UseEffect" />
             ) : null}
+
+            {selectedView === "FetchDemo" ? (
+              <FetchDemo title="Fetch Demo" />
+            ) : null}
           </div>
         </div>
       </div>
@@ -112,6 +117,11 @@ const Buttons = (props: ButtonProps) => {
     <button className="btn-w100" onClick={() => handleSelected("UseEffect")}>
       UseEffect
     </button>
+
+    <button className="btn-w100" onClick={() => handleSelected("FetchDemo")}>
+      FetchDemo
+    </button>
+
     </>
   );
 };
