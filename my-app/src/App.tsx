@@ -8,6 +8,7 @@ import FormUncontrolled from "./exercises/FormUncontrolled";
 import StateDemo from "./exercises/StateDemo1";
 import StateDemo2 from "./exercises/StateDemo2";
 import StateDemo3 from "./exercises/StateDemo3";
+import UseEffect from "./exercises/UseEffect";
 
 export default function App() {
   const [selectedView, setSelectedView] = useState("info");
@@ -57,6 +58,9 @@ export default function App() {
             {selectedView === "State Demo 3" ? (
               <StateDemo3 title="State Demo 3" />
             ) : null}
+            {selectedView === "UseEffect" ? (
+              <UseEffect title="UseEffect" />
+            ) : null}
           </div>
         </div>
       </div>
@@ -104,7 +108,10 @@ const Buttons = (props: ButtonProps) => {
     <button className="btn-w100" onClick={() => handleSelected("State Demo 3")}>
       State Demo 3
     </button>
-  
+
+    <button className="btn-w100" onClick={() => handleSelected("UseEffect")}>
+      UseEffect
+    </button>
     </>
   );
 };
